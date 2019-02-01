@@ -56,7 +56,7 @@ export default {
       let result = await this.$refs.form.validate(res => {
         return res
       })
-      console.log(result)
+      console.log(result) //promise
     },
     reset () {
       this.$refs.form.resetFields()
@@ -67,7 +67,7 @@ export default {
         console.log(res)
         return res
       })
-      console.log(result)
+      console.log(result) // undefined
     },
     validateAge (rule, value, callback) {
       console.log(rule)

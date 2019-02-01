@@ -6,8 +6,13 @@ import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 
+import vueExtend from '@/common/components/vue-defined.js'
+
 Vue.config.productionTip = false
 Vue.use(iView)
+Vue.config.devtool = true
+Vue.use(vueExtend)
+// 避免eslint 进行检测
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

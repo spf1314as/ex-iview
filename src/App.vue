@@ -5,21 +5,21 @@
                 <Menu mode="horizontal" theme="dark" active-name="1">
                     <div class="layout-logo"></div>
                     <div class="layout-nav">
-                        <MenuItem name="1" to="/tpl/form">
+                        <MenuItem name="1" to="/">
                             <Icon type="ios-navigate"></Icon>
                             form
                         </MenuItem>
-                        <MenuItem name="2" to="/tpl/table">
+                        <MenuItem name="2" to="/table">
                             <Icon type="ios-keypad"></Icon>
                             table
                         </MenuItem>
-                        <MenuItem name="3">
+                        <MenuItem name="3" to="/extend">
                             <Icon type="ios-analytics"></Icon>
-                            Item 3
+                            extend
                         </MenuItem>
-                        <MenuItem name="4">
+                        <MenuItem name="4" to='/component'>
                             <Icon type="ios-paper"></Icon>
-                            Item 4
+                            vue-defined
                         </MenuItem>
                     </div>
                 </Menu>
@@ -32,63 +32,63 @@
     </div>
 </template>
 <script>
-    export default {
-        data(){
-            return {
-                data2:
-                [
-                    {
-                        name:'kkk',
-                        age: 18,
-                        sexy:'female'
-                    }
-                ],
-                self: this,
-                count: 0,
-                mycolumn:[
-                    {
-                        key: 'name',
-                        title: '姓名'
-                    },
-                    {
-                        title: '年龄',
-                        key: 'age'
-                    },
-                    {
-                        title:'性别',
-                        key: 'sexy'
-                    },
-                    {
-                        title: '操作',
-                        key: 'do',
-                        render:(h, params) => {
-                            let that = this;
-                            return h('i-switch',{
-                                on:{
-                                    'on-change':(state) =>{
-                                        if(!state) return
-                                        this.getData().then( res => {
-                                            that.data2[0].age = res
-                                        })
-                                    }
+export default {
+    data(){
+        return {
+            data2:
+            [
+                {
+                    name:'kkk',
+                    age: 18,
+                    sexy:'female'
+                }
+            ],
+            self: this,
+            count: 0,
+            mycolumn:[
+                {
+                    key: 'name',
+                    title: '姓名'
+                },
+                {
+                    title: '年龄',
+                    key: 'age'
+                },
+                {
+                    title:'性别',
+                    key: 'sexy'
+                },
+                {
+                    title: '操作',
+                    key: 'do',
+                    render:(h, params) => {
+                        let that = this;
+                        return h('i-switch',{
+                            on:{
+                                'on-change':(state) =>{
+                                    if(!state) return
+                                    this.getData().then( res => {
+                                        that.data2[0].age = res
+                                    })
                                 }
-                            })
-                        }
+                            }
+                        })
                     }
-                ]
-            }
-        },
-        methods: {
-            getData(){
-                let that = this;
-                return new Promise(resolve => {
-                   setTimeout( _ => {
-                       resolve(new Date().getFullYear())
-                   },3*1000)
-                })
-            }
+                }
+            ]
         }
+    },
+    methods: {
+      getData (){
+        let that = this
+        return new Promise(resolve => {
+            setTimeout(_ => {
+                resolve(new Date().getFullYear())
+            }, 3 * 1000)
+        })
+      }
     }
+}
 </script>
 <style scoped lang="scss">
    .layout{
@@ -115,5 +115,11 @@
     }
     .layout-footer-center{
         text-align: center;
+    }
+    .ivu-menu-horizontal .ivu-menu-item, .ivu-menu-horizontal .ivu-menu-submenu{
+      padding: 0 15px;
+    }
+    .ivu-layout-header{
+      padding: 0 20px;
     }
 </style>
