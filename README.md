@@ -22,11 +22,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 1. name
 2. list
-  * list1
-  * list2
+    * list1
+    * list2
 
 ## table
-[百度](href=https://www.baidu.com/)
+[百度](https://www.baidu.com/)
 
 |props|type|default|required|
 |-----|:-----|:-----|:----:|
