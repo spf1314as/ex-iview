@@ -1,26 +1,27 @@
 <!-- this is form component -->
 <template>
   <div>
-      <Row>
-        <Col span='14' offset='5'>
-            <Form ref='form' :label-width='120' :model="formData" :rules="validateRules">
-              <FormItem label='姓名' prop='name'>
-                <Input type="text" :clearable="true" v-model='formData.name' placeholder="输入你的名字。。。"/>
-              </FormItem>
-              <FormItem label='密码' prop='pwd'>
-                <Input type='text' :clearable="true" v-model="formData.pwd" placeholder="请输入你的密码。。。"/>
-              </FormItem>
-               <FormItem label='年龄' prop='age'>
-                <Input type='text' v-model="formData.age"/>
-              </FormItem>
-              <FormItem>
-                <Button type="primary" @click='submit'>提交</Button>
-                <Button type="success" @click='reset'>重置</Button>
-                <Button ghost type="info" @click='validate'>验证</Button>
-              </FormItem>
-          </Form>
-        </Col>
-      </Row>
+    <Row>
+      <Col span='14' offset='5'>
+          <Form ref='form' :label-width='120' :model="formData" :rules="validateRules">
+            <FormItem label='姓名' prop='name'>
+              <Input type="text" :clearable="true" v-model='formData.name' placeholder="输入你的名字。。。"/>
+            </FormItem>
+            <FormItem label='密码' prop='pwd'>
+              <Input type='text' :clearable="true" v-model="formData.pwd" placeholder="请输入你的密码。。。"/>
+            </FormItem>
+              <FormItem label='年龄' prop='age'>
+              <Input type='text' v-model="formData.age"/>
+            </FormItem>
+            <FormItem>
+              <Button type="primary" @click='submit'>提交</Button>
+              <Button type="success" @click='reset'>重置</Button>
+              <Button ghost type="info" @click='validate'>验证</Button>
+            </FormItem>
+        </Form>
+      </Col>
+    </Row>
+    <npm-test show='npm'></npm-test>
   </div>
 </template>
 
@@ -48,7 +49,9 @@ export default {
       }
     }
   },
-  components: {},
+  components: {
+    npmTest: _ => import('./test-npm.vue')
+  },
   computed: {},
   filters: {},
   methods: {
