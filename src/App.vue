@@ -13,13 +13,13 @@
                             <Icon type="ios-keypad"></Icon>
                             table
                         </MenuItem>
-                        <MenuItem name="3">
+                        <MenuItem name="3" to="/extend">
                             <Icon type="ios-analytics"></Icon>
-                            Item 3
+                            extend
                         </MenuItem>
-                        <MenuItem name="4">
+                        <MenuItem name="4" to='/component'>
                             <Icon type="ios-paper"></Icon>
-                            Item 4
+                            vue-defined
                         </MenuItem>
                     </div>
                 </Menu>
@@ -37,6 +37,7 @@ export default {
     return {
     }
   }
+
 }
 </script>
 <style scoped lang="scss">
@@ -64,5 +65,11 @@ export default {
     }
     .layout-footer-center{
         text-align: center;
+    }
+    .ivu-menu-horizontal .ivu-menu-item, .ivu-menu-horizontal .ivu-menu-submenu{
+      padding: 0 15px;
+    }
+    .ivu-layout-header{
+      padding: 0 20px;
     }
 </style>
