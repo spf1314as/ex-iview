@@ -34,7 +34,16 @@ export default {
   },
 
   mounted () {
-    console.log('this is form extend at mounted')
+    console.log('parent mounted')
+  },
+  created () {
+    console.log('parent created ')
+  },
+  destroyed () {
+    console.log('parent destroyed')
+  },
+  updated () {
+    console.log('parent updated')
   }
 
 }

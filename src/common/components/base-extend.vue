@@ -14,7 +14,8 @@
 export default {
   data () {
     return {
-      name: 'base extend'
+      name: 'base extend',
+      time: ''
     };
   },
   extends: import('./extend-mixins.js'),
@@ -32,6 +33,7 @@ export default {
  methods: {
     bind (){
       console.log('this is bind')
+      this.time = Date.now()
     }
   },
   filters: {},
