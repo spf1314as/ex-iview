@@ -4,6 +4,7 @@
     <h1>this is test extend </h1>
       <Button type='primary' @click='consoleTime'>console</Button>
       <extends-template/>
+      <class-component></class-component>
   </div>
 </template>
 
