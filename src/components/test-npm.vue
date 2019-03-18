@@ -6,12 +6,11 @@
       test props and computed {{showName}}
     </h3>
     <Button @click='showModalFunc(true)'>show modal</Button>
-    <npmModal  v-if='showModal' @on-visible-change='showModalFunc' :showModal='showModal'/>
   </div>
 </template>
 
 <script>
-import {npmModal} from 'npmModal'
+import echarts from 'echarts'
 export default {
   data () {
     return {
@@ -25,7 +24,6 @@ export default {
     }
   },
   components: {
-    npmModal
   },
   computed: {
     showName(){

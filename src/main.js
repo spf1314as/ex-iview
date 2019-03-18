@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import iView from 'iview'
+require('echarts')
 import 'iview/dist/styles/iview.css'
 
 import vueExtend from '@/common/components/vue-defined.js'
