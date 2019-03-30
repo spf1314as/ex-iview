@@ -1,35 +1,46 @@
 <template>
-    <div class="layout">
-        <Layout>
-            <Header :style="{position: 'fixed', width: '100%'}">
-                <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo"></div>
-                    <div class="layout-nav">
-                        <MenuItem name="1" to="/">
-                            <Icon type="ios-navigate"></Icon>
-                            form
+  <div class="layout">
+    <Layout>
+      <Header :style="{position: 'fixed', width: '100%'}">
+        <Menu 
+          mode="horizontal" 
+          theme="dark" 
+          active-name="1">
+          <div class="layout-logo"/>
+          <div class="layout-nav">
+            <MenuItem 
+              name="1" 
+              to="/">
+            <Icon type="ios-navigate"/>
+            form
                         </MenuItem>
-                        <MenuItem name="2" to="/table">
-                            <Icon type="ios-keypad"></Icon>
-                            table
+            <MenuItem 
+              name="2" 
+              to="/table">
+            <Icon type="ios-keypad"/>
+            table
                         </MenuItem>
-                        <MenuItem name="3" to="/extend">
-                            <Icon type="ios-analytics"></Icon>
-                            extend
+            <MenuItem 
+              name="3" 
+              to="/extend">
+            <Icon type="ios-analytics"/>
+            extend
                         </MenuItem>
-                        <MenuItem name="4" to='/component'>
-                            <Icon type="ios-paper"></Icon>
-                            vue-defined
+            <MenuItem 
+              name="4" 
+              to="/component">
+            <Icon type="ios-paper"/>
+            vue-defined
                         </MenuItem>
-                    </div>
-                </Menu>
-            </Header>
-            <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
-                <router-view></router-view>
-            </Content>
-            <Footer class="layout-footer-center">{{new Date().getFullYear()}} &copy; double bean</Footer>
-        </Layout>
-    </div>
+          </div>
+        </Menu>
+      </Header>
+      <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
+        <router-view/>
+      </Content>
+      <Footer class="layout-footer-center">{{ new Date().getFullYear() }} &copy; double bean</Footer>
+    </Layout>
+  </div>
 </template>
 <script>
 export default {

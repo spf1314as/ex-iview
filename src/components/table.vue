@@ -2,13 +2,18 @@
 <!-- this is form component -->
 <template>
   <div>
-    <Table stripe :columns="mycolumn" :data="data2"></Table>
+    <Table 
+      :columns="mycolumn" 
+      :data="data2" 
+      stripe/>
   </div>
 </template>
 
 <script>
 import Time from '@/util/common.js'
 export default {
+  components: {},
+  filters: {},
   data () {
     let that = this
      return {
@@ -77,9 +82,7 @@ export default {
         ]
     }
   },
-  components: {},
   computed: {},
-  filters: {},
   methods: {
     getData(){
         let that = this;

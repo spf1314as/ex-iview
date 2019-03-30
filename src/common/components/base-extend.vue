@@ -1,9 +1,9 @@
 <!-- this is base of extend -->
 <template>
   <div>
-    <h2>component-name: {{componentName}}</h2>
-    <Button @click='bind'>click me</Button>
-    <i-circle :percent=80>
+    <h2>component-name: {{ componentName }}</h2>
+    <Button @click="bind">click me</Button>
+    <i-circle :percent="80">
       <span> 80%</span>
     </i-circle>
   </div>
@@ -30,6 +30,8 @@ export default {
       return that.name + Date.now();
     }
   },
+
+  created(){},
  methods: {
     bind (){
       console.log('this is bind')
@@ -37,8 +39,6 @@ export default {
     }
   },
   filters: {},
-
-  created(){},
 }
 </script>
 <style lang='scss' scoped>

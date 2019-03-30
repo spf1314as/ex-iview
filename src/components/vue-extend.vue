@@ -2,28 +2,27 @@
 <template>
   <div>
     <h1>this is vue component </h1>
-    <vue-defined></vue-defined>
+    <vue-defined/>
     <h1>this is solution of pre by v-html</h1>
-    <div class="container" v-html='pre'>
-    </div>
+    <div 
+      class="container" 
+      v-html="pre"/>
   </div>
 </template>
 
 <script>
 import echarts from 'echarts'
 export default {
+  components: {},
+
+  filters: {},
   data () {
     return {
       pre: ''
     }
   },
-  components: {},
 
   computed: {},
-
-  filters: {},
-
-  methods: {},
   mounted () {
     setTimeout(_ => {
           this.pre = `<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam iusto iure quasi, labore aut impedit odit! Doloremque enim inventore eaque omnis, illo architecto neque repellendus et odio quisquam autem.</pre>`
@@ -36,7 +35,9 @@ export default {
         element.style.whiteSpace = 'normal'
       });
     })
-  }
+  },
+
+  methods: {},
 }
 </script>
 <style scoped>

@@ -1,20 +1,14 @@
 <!-- this is base of extend -->
 <template>
   <div>
-    <h2>component-name: {{componentName}}</h2>
+    <h2>component-name: {{ componentName }}</h2>
   </div>
 </template>
 
 <script>
 import extendMixins from './extend-mixins.js'
 export default {
-  name: 'base extend',
-  data () {
-    return {
-      name: 'base mixins'
-    };
-  },
-  extends: extendMixins,
+  name: 'BaseExtend',
   // mixins: [extendMixins],
   components: {
     componentName(){
@@ -23,11 +17,17 @@ export default {
     }
   },
 
+  filters: {},
+  extends: extendMixins,
+  data () {
+    return {
+      name: 'base mixins'
+    };
+  },
+
   computed: {
 
   },
-
-  filters: {},
 
   created(){},
 }

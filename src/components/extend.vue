@@ -1,10 +1,12 @@
 <!-- this is test extend and mixins  -->
 <template>
-  <div class='extends-wrapper'>
+  <div class="extends-wrapper">
     <h1>this is test extend </h1>
-      <Button type='primary' @click='consoleTime'>console</Button>
-      <extends-template/>
-      <!-- <extends-component></extends-component> -->
+    <Button 
+      type="primary" 
+      @click="consoleTime">console</Button>
+    <extends-template/>
+    <!-- <extends-component></extends-component> -->
     <div id="mounted">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quibusdam, alias amet provident magnam doloribus error esse repudiandae temporibus iste natus nemo nam qui commodi. Quod dolore modi corporis ipsam?
     </div>
@@ -16,34 +18,28 @@ import baseExtend from '@/common/components/base-extend.vue'
 import baseMixins from '@/common/components/base-mixins.vue'
 import Vue from 'vue'
 let Extend = Vue.extend({
-      name: 'extend',
+      name: 'Extend',
       mounted () {
         console.log('i am vue.extend!!!')
       },
       template: "<div><h1>iam vue.extend !!!</h1></div>"
   })
 export default {
-  name: 'extend',
-  data () {
-    return {
-    }
-  },
-  extends: baseExtend,
-  mixins: [baseMixins],
+  name: 'Extend',
 
   components: {
     extendsTemplate: _ => import('@/common/components/extends-template.js')
   },
 
-  computed: {},
-
   filters: {},
-
-  methods: {
-    // consoleTime () {
-    //   console.log(`this is ${this.$options.name}`)
-    // }
+  extends: baseExtend,
+  mixins: [baseMixins],
+  data () {
+    return {
+    }
   },
+
+  computed: {},
 
   mounted () {
     console.log('parent mounted')
@@ -73,7 +69,13 @@ export default {
   },
   updated () {
     console.log('parent updated')
-  }
+  },
+
+  methods: {
+    // consoleTime () {
+    //   console.log(`this is ${this.$options.name}`)
+    // }
+  },
 
 }
 </script>

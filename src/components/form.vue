@@ -2,31 +2,64 @@
 <template>
   <div>
     <Row>
-      <Col span='14' offset='5'>
-          <Form ref='form' :label-width='120' :model="formData" :rules="validateRules">
-            <FormItem label='姓名' prop='name'>
-              <Input type="text" :clearable="true" v-model='formData.name' placeholder="输入你的名字。。。"/>
-            </FormItem>
-            <FormItem label='密码' prop='pwd'>
-              <Input type='text' :clearable="true" v-model="formData.pwd" placeholder="请输入你的密码。。。"/>
-            </FormItem>
-              <FormItem label='年龄' prop='age'>
-              <Input type='text' v-model="formData.age"/>
-            </FormItem>
-            <FormItem>
-              <Button type="primary" @click='submit'>提交</Button>
-              <Button type="success" @click='reset'>重置</Button>
-              <Button ghost type="info" @click='validate'>验证</Button>
-            </FormItem>
-        </Form>
+      <Col
+        span="14"
+        offset="5">
+      <Form
+        ref="form"
+        :label-width="120"
+        :model="formData"
+        :rules="validateRules">
+        <FormItem
+          label="姓名"
+          prop="name">
+          <Input
+            :clearable="true"
+            v-model="formData.name"
+            type="text"
+            placeholder="输入你的名字。。。">
+        </FormItem>
+        <FormItem
+          label="密码"
+          prop="pwd">
+          <Input
+            :clearable="true"
+            v-model="formData.pwd"
+            type="text"
+            placeholder="请输入你的密码。。。">
+        </FormItem>
+        <FormItem
+          label="年龄"
+          prop="age">
+          <Input
+            v-model="formData.age"
+            type="text">
+        </FormItem>
+        <FormItem>
+          <Button
+            type="primary"
+            @click="submit">提交</Button>
+          <Button
+            type="success"
+            @click="reset">重置</Button>
+          <Button
+            ghost
+            type="info"
+            @click="validate">验证</Button>
+        </FormItem>
+      </Form>
       </Col>
     </Row>
-    <npm-test show='npm'></npm-test>
+    <npm-test show="npm"/>
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+    NpmTest: _ => import('./test-npm.vue')
+  },
+  filters: {},
   data () {
     let that = this
     return {
@@ -49,11 +82,10 @@ export default {
       }
     }
   },
-  components: {
-    npmTest: _ => import('./test-npm.vue')
-  },
   computed: {},
-  filters: {},
+  mounted () {},
+  created () {},
+  beforeDestroy () {},
   methods: {
     async submit () {
       let result = await this.$refs.form.validate(res => {
@@ -82,9 +114,6 @@ export default {
       }
     }
   },
-  mounted () {},
-  created () {},
-  beforeDestroy () {}
 }
 </script>
 <style lang='scss' scoped>
