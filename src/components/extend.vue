@@ -4,13 +4,24 @@
     <h1>this is test extend </h1>
       <Button type='primary' @click='consoleTime'>console</Button>
       <extends-template/>
-      <class-component></class-component>
+      <!-- <extends-component></extends-component> -->
+    <div id="mounted">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quibusdam, alias amet provident magnam doloribus error esse repudiandae temporibus iste natus nemo nam qui commodi. Quod dolore modi corporis ipsam?
+    </div>
   </div>
 </template>
 
 <script>
 import baseExtend from '@/common/components/base-extend.vue'
 import baseMixins from '@/common/components/base-mixins.vue'
+import Vue from 'vue'
+let Extend = Vue.extend({
+      name: 'extend',
+      mounted () {
+        console.log('i am vue.extend!!!')
+      },
+      template: "<div><h1>iam vue.extend !!!</h1></div>"
+  })
 export default {
   name: 'extend',
   data () {
@@ -36,9 +47,26 @@ export default {
 
   mounted () {
     console.log('parent mounted')
+    let el = document.getElementById('mounted')
+    // 1
+    new Extend ({
+      data: {
+        time: Date.now()
+      }
+    }).$mount('#mounted')
+    // 2
+    // let dom = new Extend({
+    //   data: {
+    //     time: Date.now()
+    //   }
+    // }).$mount()
+    // el.appendChild(dom.$el)
+
   },
   created () {
     console.log('parent created ')
+
+
   },
   destroyed () {
     console.log('parent destroyed')

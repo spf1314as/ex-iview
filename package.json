@@ -9,7 +9,8 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "analy": "npm_config_report=true node build/build.js"
+    "analy": "npm_config_report=true node build/build.js",
+    "pre": "echo \"pre commit \" && exit 0"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -58,6 +59,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
+    "pre-commit": "^1.2.2",
     "rimraf": "^2.6.0",
     "sass-loader": "^7.1.0",
     "scss-loader": "0.0.1",

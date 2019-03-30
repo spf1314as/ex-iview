@@ -31,3 +31,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 |props|type|default|required|
 |-----|:-----|:-----|:----:|
 | name | string | 'table' | true |
+
+# 增加pre-commit
