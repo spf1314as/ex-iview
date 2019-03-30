@@ -12,6 +12,8 @@
     "analy": "npm_config_report=true node build/build.js",
     "pre": "echo \"pre commit \" && exit 0"
   },
+  "pre-commit": ["pre"],
+  "precommit.colors": true,
   "dependencies": {
     "axios": "^0.18.0",
     "echarts": "^4.1.0",
