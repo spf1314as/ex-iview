@@ -12,17 +12,18 @@
 <script>
 // import extendMixins from './extend-mixins.js'
 export default {
+  filters: {},
+  components: {
+
+  },
+  extends: import('./extend-mixins.js'),
+  // extends: require('./extend-mixins.js').default,
+  // mixins: [extendMixins],
   data () {
     return {
       name: 'base extend',
       time: ''
     };
-  },
-  extends: import('./extend-mixins.js'),
-  // extends: require('./extend-mixins.js').default,
-  // mixins: [extendMixins],
-  components: {
-
   },
   computed: {
      componentName(){
@@ -30,15 +31,14 @@ export default {
       return that.name + Date.now();
     }
   },
-
   created(){},
- methods: {
+  methods: {
     bind (){
       console.log('this is bind')
       this.time = Date.now()
     }
-  },
-  filters: {},
+  }
+
 }
 </script>
 <style lang='scss' scoped>

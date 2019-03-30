@@ -17,7 +17,8 @@
             :clearable="true"
             v-model="formData.name"
             type="text"
-            placeholder="输入你的名字。。。">
+            placeholder="输入你的名字...">
+          </Input>
         </FormItem>
         <FormItem
           label="密码"
@@ -26,7 +27,8 @@
             :clearable="true"
             v-model="formData.pwd"
             type="text"
-            placeholder="请输入你的密码。。。">
+            placeholder="请输入你的密码...">
+          </Input>
         </FormItem>
         <FormItem
           label="年龄"
@@ -34,6 +36,7 @@
           <Input
             v-model="formData.age"
             type="text">
+          </Input>
         </FormItem>
         <FormItem>
           <Button

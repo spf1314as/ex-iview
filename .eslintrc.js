@@ -32,6 +32,8 @@ module.exports = {
     'no-console': 0,
     'no-unused-vars': 'off',
     "linebreak-style": "off",
+    "vue/require-default-prop": "off",
+    "vue/order-in-components": 'warn',
     'vue/no-parsing-error': ['off' , {
       "x-invalid-end-tag": false
     }]

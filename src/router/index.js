@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'form',
-      component: _ => import('@/components/table.vue')
+      component: _ => import('@/components/form.vue')
     },
     {
       path: '/table',
