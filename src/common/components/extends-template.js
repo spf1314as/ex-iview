@@ -1,4 +1,4 @@
-import baseExtend from './base-extend'
+// import baseExtend from './base-extend'
 export default {
   name: 'extends-template',
   extends: require('./base-extend').default,

@@ -4,14 +4,13 @@
     <h1>this is vue component </h1>
     <vue-defined/>
     <h1>this is solution of pre by v-html</h1>
-    <div 
-      class="container" 
+    <div
+      class="container"
       v-html="pre"/>
   </div>
 </template>
 
 <script>
-import echarts from 'echarts'
 export default {
   components: {},
 
@@ -25,7 +24,7 @@ export default {
   computed: {},
   mounted () {
     setTimeout(_ => {
-          this.pre = `<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam iusto iure quasi, labore aut impedit odit! Doloremque enim inventore eaque omnis, illo architecto neque repellendus et odio quisquam autem.</pre>`
+      this.pre = '<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quam iusto iure quasi, labore aut impedit odit! Doloremque enim inventore eaque omnis, illo architecto neque repellendus et odio quisquam autem.</pre>'
     },1000)
   },
   updated () {
@@ -33,7 +32,7 @@ export default {
       let pre = document.querySelectorAll('.container pre')
       pre.forEach(element => {
         element.style.whiteSpace = 'normal'
-      });
+      })
     })
   },
 

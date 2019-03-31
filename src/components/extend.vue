@@ -2,8 +2,8 @@
 <template>
   <div class="extends-wrapper">
     <h1>this is test extend </h1>
-    <Button 
-      type="primary" 
+    <Button
+      type="primary"
       @click="consoleTime">console</Button>
     <extends-template/>
     <!-- <extends-component></extends-component> -->
@@ -18,12 +18,12 @@ import baseExtend from '@/common/components/base-extend.vue'
 import baseMixins from '@/common/components/base-mixins.vue'
 import Vue from 'vue'
 let Extend = Vue.extend({
-      name: 'Extend',
-      mounted () {
-        console.log('i am vue.extend!!!')
-      },
-      template: "<div><h1>iam vue.extend !!!</h1></div>"
-  })
+  name: 'Extend',
+  mounted () {
+    console.log('i am vue.extend!!!')
+  },
+  template: '<div><h1>iam vue.extend !!!</h1></div>'
+})
 export default {
   name: 'Extend',
 
@@ -43,7 +43,7 @@ export default {
 
   mounted () {
     console.log('parent mounted')
-    let el = document.getElementById('mounted')
+    // let el = document.getElementById('mounted')
     // 1
     new Extend ({
       data: {

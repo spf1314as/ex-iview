@@ -13,7 +13,7 @@ export default {
   components: {
     componentName(){
       let that = this
-      return that.name + Date.now();
+      return that.name + Date.now()
     }
   },
 
@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       name: 'base mixins'
-    };
+    }
   },
 
   computed: {

@@ -23,12 +23,12 @@ export default {
     return {
       name: 'base extend',
       time: ''
-    };
+    }
   },
   computed: {
-     componentName(){
+    componentName(){
       let that = this
-      return that.name + Date.now();
+      return that.name + Date.now()
     }
   },
   created(){},

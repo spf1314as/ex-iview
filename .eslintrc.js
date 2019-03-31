@@ -15,7 +15,7 @@ module.exports = {
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     'plugin:vue/strongly-recommended',
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'eslint:recommended'
+    "eslint:recommended"
   ],
   // required to lint *.vue files
   plugins: [
@@ -28,14 +28,16 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/no-v-html': 'off',
     'no-console': 0,
-    'no-unused-vars': 'off',
+    'no-unused-vars': ['error', {var: 'all', args: 'none'}],
     "linebreak-style": "off",
     "vue/require-default-prop": "off",
     "vue/order-in-components": 'warn',
     'vue/no-parsing-error': ['off' , {
       "x-invalid-end-tag": false
-    }]
+    }],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "indent": ['error', 2,{ "VariableDeclarator": 2 ,"SwitchCase": 1,"outerIIFEBody": 2}]
   }
 }
