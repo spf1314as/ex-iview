@@ -2,10 +2,15 @@
 <!-- this is form component -->
 <template>
   <div>
-    <Table 
-      :columns="mycolumn" 
-      :data="data2" 
-      stripe/>
+    <Table
+      :columns="mycolumn"
+      :data="data2"/>
+    <Page
+      class-name='page-wrapper'
+      :total='100'
+      show-sizer
+      show-total/>
+    <table-pug/>
   </div>
 </template>
 
@@ -14,6 +19,9 @@ import Time from '@/util/common.js'
 export default {
   components: {},
   filters: {},
+  components: {
+    TablePug: _ => import('../ex-components/TablePug.vue')
+  },
   data () {
     let that = this
      return {
@@ -100,10 +108,15 @@ export default {
         setTimeout( _ => {
             this.open = false
             console.log(this.open)
-        },2*1000)
+        }, 2*1000)
     }
-  }
+  },
 }
 </script>
-<style  scoped>
+<style lang='scss' scoped>
+  .page-wrapper{
+    text-align: right;
+    margin-top: 10px;
+  }
+
 </style>
