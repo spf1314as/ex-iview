@@ -1,7 +1,7 @@
 # iview-project
 
 > a vue project basing on iview
->> vue project includes 'pug' 'eslint' 'iview' 'webpack'
+>> vue project includes `pug` `eslint` `iview` `webpack`
 
 1. name
 2. list
