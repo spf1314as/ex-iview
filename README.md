@@ -2,24 +2,6 @@
 
 > a vue project basing on iview
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
 1. name
 2. list
     * list1
@@ -33,3 +15,20 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 | name | string | 'table' | true |
 
 # 增加pre-commit
+- 列表无序
+**是不是加粗呢
+``` javascript
+import default from 'index.js'
+
+// 测试
+
+new Vue()
+
+```
+``` html
+<header>
+  <h1>
+    测试html片段
+  </h1>
+</header>
+```
