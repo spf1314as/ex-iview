@@ -21,7 +21,7 @@
 
 # 增加pre-commit
 - 列表无序
-**是不是加粗呢**
+***是不是加粗呢***
 ``` javascript
 import default from 'index.js'
 
