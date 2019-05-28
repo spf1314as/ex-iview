@@ -50,6 +50,14 @@
             type="info"
             @click="validate">验证</Button>
         </FormItem>
+        <FormItem>
+          <RadioGroup v-model.trim="radioValue">
+            <Radio
+              :label="item.id"
+              v-for="(item, index) in radioData"
+              :key='index'/>
+          </RadioGroup>
+        </FormItem>
       </Form>
       </Col>
     </Row>
@@ -82,7 +90,12 @@ export default {
         age: [
           {validator: that.validateAge, message: 'didi', trigger: 'blur'}
         ]
-      }
+      },
+      radioData: [
+        {id: 111, label: '111'},
+        {id: 222, label: '222'}
+      ],
+      radioValue: ''
     }
   },
   computed: {},

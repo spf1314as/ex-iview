@@ -13,25 +13,25 @@
               to="/">
             <Icon type="ios-navigate"/>
             form
-                        </MenuItem>
+            </MenuItem>
             <MenuItem 
               name="2" 
               to="/table">
             <Icon type="ios-keypad"/>
             table
-                        </MenuItem>
+            </MenuItem>
             <MenuItem 
               name="3" 
               to="/extend">
             <Icon type="ios-analytics"/>
             extend
-                        </MenuItem>
+            </MenuItem>
             <MenuItem 
               name="4" 
               to="/component">
             <Icon type="ios-paper"/>
             vue-defined
-                        </MenuItem>
+            </MenuItem>
           </div>
         </Menu>
       </Header>

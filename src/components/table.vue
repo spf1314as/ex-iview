@@ -92,10 +92,11 @@ export default {
   computed: {},
   methods: {
     getData(){
+      // eslint-disable-next-line
       return new Promise(resolve => {
         setTimeout( _ => {
           resolve(new Date().getFullYear())
-        },3*1000)
+        },3 * 1000)
       })
     },
     testJsx(){

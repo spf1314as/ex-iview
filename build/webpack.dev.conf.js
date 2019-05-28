@@ -9,6 +9,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const FileListPlugin = require('../../webpack-plugin/FileListPlugin.js')
+const HappyPack = require('happypack')
+const os = require('os')
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length - 1 });
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -64,7 +68,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new HappyPack({// happpack 多线程打包
+      id: 'babel',
+      threadPool: happyThreadPool,
+      loaders: ['babel-loader']
+    }),
+    new FileListPlugin({env: process.env.NODE_ENV, dir: __dirname})
   ]
 })
 
