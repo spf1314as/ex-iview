@@ -19,6 +19,7 @@
   "precommit.silent": false,
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-loader": "^7.1.5",
     "echarts": "^4.1.0",
     "iview": "2.14.3",
     "lodash": "^4.17.11",
