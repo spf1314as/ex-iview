@@ -18,7 +18,7 @@
   "precommit.colors": false,
   "precommit.silent": false,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "echarts": "^4.1.0",
     "iview": "^3.2.2",
     "lodash": "^4.17.11",
